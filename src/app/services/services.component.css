@@ -1,0 +1,38 @@
+
+#services1 > h2, #contact > h2, #projects > h2 {
+    text-align: center;
+    margin: 4rem 0 2rem;
+}
+
+#services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 5%;
+    max-width: 100%;
+}
+
+#services > div {
+    flex: 1 1 300px;
+    max-width: 400px;
+    min-width: 250px;
+    padding: 2rem;
+    background: var(--bg-section-color);
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem var(--main-color);
+    color: var(--text-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#services > div:hover, input:hover, textarea:hover, .btn:hover ,.logo:hover , #btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 2rem wheat;
+}
+
+#services i {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+    display: block;
+}
