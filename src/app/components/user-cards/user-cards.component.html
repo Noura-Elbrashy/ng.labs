@@ -1,0 +1,12 @@
+<div class="card">
+  <img [src]="user.profilePic" alt="Profile Picture" />
+  <h3>{{ user.username }}</h3>
+  <p>Email: {{ user.email }}</p>
+  <p>Phone: {{ user.phone }}</p>
+  <span [style.color]="user.isVeerified ? 'green' : 'red'">
+    
+    <i class="fas fa-star"></i>
+
+
+  </span>
+</div>

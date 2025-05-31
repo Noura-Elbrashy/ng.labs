@@ -1,0 +1,4 @@
+<input [(ngModel)]="email" placeholder="Search by email" />
+<button (click)="searchNow()">Search</button>
+<button *ngIf="email" (click)="resetNow()">Reset</button>
+

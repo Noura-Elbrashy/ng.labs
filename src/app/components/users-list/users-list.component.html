@@ -1,0 +1,9 @@
+<div class="search-container">
+  <input [(ngModel)]="email" placeholder="Search by email" />
+  <button (click)="searchNow()">Search</button>
+  <button *ngIf="email" (click)="resetNow()">Reset</button>
+</div>
+
+<div class="users-container">
+  <app-user-cards *ngFor="let user of filteredUsers" [user]="user"></app-user-cards>
+</div>
