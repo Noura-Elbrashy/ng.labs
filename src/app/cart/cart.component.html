@@ -1,0 +1,29 @@
+<div class="container mt-4">
+  <h2 class="mb-4 text-center">Your Cart</h2>
+  <div *ngIf="cartItems.length === 0" class="text-center p-4 text-muted fs-5">
+    Your cart is empty.
+  </div>
+
+  <div *ngFor="let item of cartItems" class="card mb-3 shadow-sm">
+    <div class="row g-0 align-items-center">
+      <div class="col-md-4 text-center p-2">
+        <img [src]="item.image" alt="{{item.title}}" class="img-fluid rounded" style="max-height: 150px; object-fit: contain;">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title mb-2">{{item.title}}</h5>
+          <p class="card-text mb-3"><strong>Price: </strong> ${{item.price}}</p>
+          <button (click)="removeItem(item.id)" class="btn btn-danger btn-sm">
+            <i class="fa fa-trash"></i> Remove
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <button *ngIf="cartItems.length > 0" (click)="clearCart()" class="btn btn-warning">
+      <i class="fa fa-trash-alt"></i> Clear Cart
+    </button>
+  </div>
+</div>
